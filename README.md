@@ -7,9 +7,9 @@ It is based on a project by Alberto Donato for the [Sonarr](https://radarr.video
 https://github.com/albertodonato/sonarr-snap
 
 ## Installation
-This snap has not been published to the [Snapcraft](https://snapcraft.io) store yet.
+**Note**: This snap has not been published to the [Snapcraft Snap Store](https://snapcraft.io/store) yet.
 
-If/when it does, it can be installed from the store via:
+Therefore, the following will not work yet.
 
 ```bash
     sudo snap install radarr
