@@ -1,6 +1,6 @@
-# Snap for Radarr Smart PVR
+# Snap for Radarr
 
-This is a snap for the [Radarr](https://radarr.video) Smart PVR.
+This is a snap for Radarr, a movie collection manager for Usenet and BitTorrent users.
 
 It is based on a project by Alberto Donato for the [Sonarr](https://radarr.video) Smart PVR:
 
