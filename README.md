@@ -7,12 +7,29 @@ It is based on a project by Alberto Donato for the [Sonarr](https://sonarr.tv) S
 https://github.com/albertodonato/sonarr-snap
 
 ## Installation
+
+### Snap Store
+
 **Note**: This snap has not been published to the [Snapcraft Snap Store](https://snapcraft.io/store) yet.
 
 Therefore, the following will not work yet.
 
 ```bash
     sudo snap install radarr
+```
+
+### Build
+
+The snap can be built by simply running:
+
+```bash
+    snapcraft --debug
+```
+
+Once built, install the snap with:
+
+```bash
+    sudo snap install --dangerous radarr_*.snap
 ```
 
 ## Web GUI
