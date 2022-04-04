@@ -1,53 +1,57 @@
-# Snap for the Sonarr smart PVR
+# Snap for Radarr Smart PVR
 
-[![Snap Package](https://snapcraft.io/sonarr/badge.svg)](https://snapcraft.io/sonarr)
+This is a snap for the [Radarr](https://radarr.video) Smart PVR.
 
-This snap contains the [Sonarr](https://sonarr.tv) smart PVR.
+It is based on a project by Alberto Donato for the [Sonarr](https://radarr.video) Smart PVR:
 
-It can be installed from the store via:
+https://github.com/albertodonato/sonarr-snap
+
+## Installation
+This snap has not been published to the [Snapcraft](https://snapcraft.io) store yet.
+
+If/when it does, it can be installed from the store via:
 
 ```bash
-    sudo snap install sonarr
+    sudo snap install radarr
 ```
 
+## Web GUI
+
 After installing the snap the service web interface will be accessible at
-<http:/localhost:8989> by default.
+<http:/localhost:7878> by default.
 
-[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/sonarr)
+## Storage Configuration
 
-
-## Setting storage path for downloads
-
-Since the application runs as a confined stap, by default the applicaion will
-only be able to access files under `/var/snap/sonarr`.  It is also possible to
+Since the application runs as a confined snap by default, the application will
+only be able to access files under `/var/snap/radarr`.  It is also possible to
 access storage under `/media` by manually connecting the `removable-media`
 interface with
 
 ```bash
-    sudo snap connect sonarr:removable-media
+    sudo snap connect radarr:removable-media
 ```
 
 It's suggested to create a directory owned by `root` either under
-`/var/snap/sonarr/common` or under `/media`, after connecting the interface.
+`/var/snap/radarr/common` or under `/media`, after connecting the interface.
 
 *Note*: mount points information won't be displayed by default, as it requires
 manually connecting the `mount-observe` interface:
 
 ```bash
-    sudo snap connect sonarr:mount-observe
+    sudo snap connect radarr:mount-observe
 ```
 
 
-## Building the snap
+## Build
 
 The snap can be built by simply running:
 
 ```bash
-    snapcraft
+    snapcraft --debug
 ```
 
 Once, built, install the snap with:
 
 ```bash
-    sudo snap install --dangerous sonarr_*.snap
+    sudo snap install --dangerous radarr_*.snap
 ```
