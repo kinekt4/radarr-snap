@@ -17,8 +17,7 @@ Therefore, the following will not work yet.
 
 ## Web GUI
 
-After installing the snap the service web interface will be accessible at
-<http:/localhost:7878> by default.
+The web interface is available at http:/localhost:7878 after installation.
 
 ## More
 
