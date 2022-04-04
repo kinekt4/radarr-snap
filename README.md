@@ -34,7 +34,7 @@ Once built, install the snap with:
 
 ## Web GUI
 
-The web interface is available at http:/localhost:7878 after installation.
+The web interface is available at [http:/localhost:7878](http:/localhost:7878) after installation.
 
 ## More
 
