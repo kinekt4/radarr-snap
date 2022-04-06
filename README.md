@@ -1,4 +1,4 @@
-# Snap for Radarr
+# Snap for Radarr (v3 Legacy)
 
 This is a snap for Radarr, a movie collection manager for Usenet and BitTorrent users.
 
@@ -8,25 +8,13 @@ https://github.com/albertodonato/sonarr-snap
 
 ## Installation
 
-### Snap Store
-
-**Note**: This snap has not been published to the [Snapcraft Snap Store](https://snapcraft.io/store) yet.
-
-Therefore, the following will not work yet.
-
-```bash
-    sudo snap install radarr
-```
-
-### Build
-
-The snap can be built by simply running:
+First build:
 
 ```bash
     snapcraft --debug
 ```
 
-Once built, install the snap with:
+Then install:
 
 ```bash
     sudo snap install --dangerous radarr_*.snap
