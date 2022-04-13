@@ -15,7 +15,7 @@ icon: icon.svg
 grade: stable
 confinement: strict
 base: core20
-adopt-info: radarr
+adopt-info: set-version
 
 layout:
   /usr/share/.mono:
@@ -32,6 +32,17 @@ apps:
       - removable-media
 
 parts:
+
+  set-version:
+    plugin: nil
+    override-pull:
+      curl -L -G "https://radarr.servarr.com/v1/update/master/changes?os=linux&runtime=netcore&arch=x64" --output changes.json
+    override-build: |
+      snapcraftctl set-version "$(jq -r .[0].version changes.json)"
+    build-packages:
+      - curl
+      - jq
+
   radarr:
     plugin: nil
     source: 'https://radarr.servarr.com/v1/update/master/updatefile?os=linux'
@@ -40,10 +51,6 @@ parts:
       INST_DIR="$SNAPCRAFT_PART_INSTALL/Radarr"
       mkdir -p "$INST_DIR"
       cp -a * "$INST_DIR"
-
-      apt install curl jq
-      CHECK_URL="https://radarr.servarr.com/v1/update/master/changes?os=linux"
-      snapcraftctl set-version "$(curl -s ${CHECK_URL} | jq -r .[0].version)"
     prime:
       - Radarr
 
