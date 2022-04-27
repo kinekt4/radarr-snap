@@ -6,6 +6,10 @@ It is based on a project by Alberto Donato for the [Sonarr](https://sonarr.tv) S
 
 https://github.com/albertodonato/sonarr-snap
 
+This snap only works up to Radar v3 (considered legacy version).
+
+To use the latest Radar versions update to the dotnet snap: <https://github.com/kinekt4/radarr-dotnet>
+
 ## Installation
 
 First build:
